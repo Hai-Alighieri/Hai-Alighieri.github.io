@@ -121,3 +121,38 @@ li { margin: 0.4em 0; }
   .site-title { font-size: 2rem; }
   .site-header, main, .site-footer { padding: 0 18px; }
 }
+
+
+/* ===== 首页头像卡片 ===== */
+.profile-card {
+  text-align: center;
+  margin: 12px 0 40px;
+  padding: 28px 20px;
+  background: #fffdf4;
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+}
+.profile-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 14px;
+  border: 3px solid #d4b96a;
+}
+.profile-nickname {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.profile-title {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 18px;
+  font-size: 0.85rem;
+  color: #fff;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 999px;
+  box-shadow: 0 2px 10px rgba(102, 126, 234, 0.4);
+}
