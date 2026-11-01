@@ -1,0 +1,122 @@
+:root {
+  --bg: #faf8f2;      /* 米白纸色背景 */
+  --text: #1a1a1a;    /* 正文近黑 */
+  --link: #1a0dab;    /* 早期网页的蓝链接 */
+  --muted: #6b6b6b;   /* 次要文字 */
+  --rule: #d4d0c4;    /* 分隔线 */
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", "Noto Serif SC", "Source Han Serif SC", "Songti SC", SimSun, serif;
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+.site-header, main, .site-footer {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+/* ===== 页眉（报纸刊头） ===== */
+.site-header { padding-top: 48px; padding-bottom: 8px; }
+.site-title {
+  font-size: 2.6rem;
+  margin: 0;
+  letter-spacing: 2px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.site-title a { color: var(--text); text-decoration: none; }
+.site-desc { color: var(--muted); margin: 6px 0 16px; font-style: italic; }
+.site-header nav a { color: var(--link); margin-right: 18px; text-decoration: underline; }
+
+/* ===== 正文排版 ===== */
+main { padding-bottom: 40px; }
+
+h1, h2, h3, h4 { line-height: 1.3; font-weight: 700; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; margin-top: 1.8em; }
+h3 { font-size: 1.2rem; }
+
+a { color: var(--link); }
+
+p { margin: 1em 0; }
+
+hr { border: none; border-top: 1px solid var(--rule); margin: 28px 0; }
+
+/* 首页文章列表 */
+.post-preview { margin: 36px 0; }
+.post-title { margin: 0 0 4px; }
+.post-title a { color: var(--text); text-decoration: none; }
+.post-title a:hover { text-decoration: underline; }
+.post-meta { color: var(--muted); font-size: 0.85rem; }
+.post-excerpt { color: #333; }
+
+/* 文章内页 */
+.post-header .post-title { margin-bottom: 4px; }
+.post-subtitle { color: var(--muted); font-style: italic; margin: 0 0 8px; }
+.post-tags a { margin-right: 10px; font-size: 0.9rem; }
+
+/* 图片 */
+img { max-width: 100%; height: auto; display: block; margin: 1.6em auto; }
+figcaption { text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 0.5em; }
+
+/* 引用 */
+blockquote {
+  margin: 1.6em 0;
+  padding: 0.4em 1.3em;
+  border-left: 4px solid #b0a896;
+  color: #4a4a4a;
+  background: #f3efe4;
+}
+
+/* 代码 */
+code {
+  font-family: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+  background: #efe9d8;
+  padding: 0.12em 0.4em;
+  border-radius: 3px;
+  font-size: 0.88em;
+}
+pre {
+  background: #f3efe4;
+  border: 1px solid #e0d9c4;
+  padding: 14px 16px;
+  overflow-x: auto;
+  line-height: 1.5;
+}
+pre code { background: none; padding: 0; }
+
+/* 列表 */
+ul, ol { padding-left: 1.6em; }
+li { margin: 0.4em 0; }
+
+/* 归档 */
+.archive-list { list-style: none; padding: 0; }
+.archive-list li { padding: 0.3em 0; }
+.archive-date { color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* 标签页 */
+.muted { color: var(--muted); }
+
+/* 页脚 */
+.site-footer {
+  padding-bottom: 60px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.site-footer a { color: var(--muted); }
+
+/* 移动端 */
+@media (max-width: 520px) {
+  body { font-size: 16.5px; }
+  .site-title { font-size: 2rem; }
+}
