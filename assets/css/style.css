@@ -1,5 +1,5 @@
 :root {
-  --bg: #faf8f2;      /* 米白纸色背景 */
+  --bg: #f5efdb;      /* 米黄背景 */
   --text: #1a1a1a;    /* 正文近黑 */
   --link: #1a0dab;    /* 早期网页的蓝链接 */
   --muted: #6b6b6b;   /* 次要文字 */
@@ -14,15 +14,15 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: Georgia, "Times New Roman", "Noto Serif SC", "Source Han Serif SC", "Songti SC", SimSun, serif;
+  font-family: Georgia, "Times New Roman", "FangSong", "仿宋", "FangSong_GB2312", "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", SimSun, serif;
   line-height: 1.8;
   font-size: 18px;
 }
 
 .site-header, main, .site-footer {
-  max-width: 700px;
+  max-width: 720px;
   margin: 0 auto;
-  padding: 0 22px;
+  padding: 0 48px;
 }
 
 /* ===== 页眉（报纸刊头） ===== */
@@ -119,4 +119,5 @@ li { margin: 0.4em 0; }
 @media (max-width: 520px) {
   body { font-size: 16.5px; }
   .site-title { font-size: 2rem; }
+  .site-header, main, .site-footer { padding: 0 18px; }
 }
