@@ -128,38 +128,31 @@ li { margin: 0.4em 0; }
 
 
 
-/* ===== 右上角悬浮头像卡片 ===== */
+/* ===== 右上角矩形头像（无白框，不跟随滚动） ===== */
 .profile-card {
-  position: fixed;
+  position: absolute;
   top: 24px;
   right: 24px;
-  width: 175px;
+  width: 180px;
   text-align: center;
-  padding: 20px 16px;
-  background: #fffdf4;
-  border: 1px solid var(--rule);
-  border-radius: 14px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
-  z-index: 10;
 }
 .profile-avatar {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  border-radius: 12px;      /* 矩形圆角；想要完全直角就改成 0 */
   object-fit: cover;
-  margin: 0 auto 10px;
-  border: 3px solid #d4b96a;
+  margin: 0 auto 12px;
 }
 .profile-nickname {
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: 1px;
 }
 .profile-title {
   display: inline-block;
   margin-top: 8px;
-  padding: 4px 14px;
-  font-size: 0.78rem;
+  padding: 4px 16px;
+  font-size: 0.85rem;
   color: #fff;
   letter-spacing: 1px;
   background: linear-gradient(135deg, #667eea, #764ba2);
@@ -167,12 +160,11 @@ li { margin: 0.4em 0; }
   box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
 }
 
-/* 屏幕不够宽时（会和正文重叠），放回正文上方 */
+/* 屏幕不够宽时，放回正文上方 */
 @media (max-width: 1280px) {
   .profile-card {
     position: static;
     width: auto;
     margin: 12px 0 40px;
-    box-shadow: none;
   }
 }
