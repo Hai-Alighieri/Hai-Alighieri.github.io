@@ -30,6 +30,6 @@ exclude:
 #   3. 打开 https://giscus.app 填好仓库，把生成的 id 填到下面
 comments: true
 giscus_repo: Hai-Alighieri/Hai-Alighieri.github.io
-giscus_repo_id: "data-repo-id="MDEwOlJlcG9zaXRvcnkyMTgyMTQ1NjY=""            # 填 giscus 生成的 data-repo-id
+giscus_repo_id: "MDEwOlJlcG9zaXRvcnkyMTgyMTQ1NjY="
 giscus_category: General
-giscus_category_id: "data-category-id="DIC_kwDODQGwps4DKJ-S""        # 填 giscus 生成的 data-category-id
+giscus_category_id: "DIC_kwDODQGwps4DKJ-S"
