@@ -190,21 +190,19 @@ table { border-collapse: collapse; margin: 1.6em 0; width: 100%; }
 th, td { border: 1px solid var(--rule); padding: 8px 12px; text-align: left; }
 th { background: #efe9d8; font-weight: 700; }
 
-/* ===== 暗色模式（跟随系统） ===== */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #1e1e28;
-    --text: #d8d4c8;
-    --link: #8ab4f8;
-    --muted: #9aa0a6;
-    --rule: #3a3a44;
-  }
-  .post-excerpt { color: #bbb; }
-  blockquote { background: #2a2a35; color: #c8c4b8; border-left-color: #555; }
-  code { background: #2a2a35; }
-  pre { background: #2a2a35; border-color: #3a3a44; }
-  th { background: #2a2a35; }
+/* ===== 暗色模式（html.dark 类控制，可手动切换） ===== */
+html.dark {
+  --bg: #1e1e28;
+  --text: #d8d4c8;
+  --link: #8ab4f8;
+  --muted: #9aa0a6;
+  --rule: #3a3a44;
 }
+html.dark .post-excerpt { color: #bbb; }
+html.dark blockquote { background: #2a2a35; color: #c8c4b8; border-left-color: #555; }
+html.dark code { background: #2a2a35; }
+html.dark pre { background: #2a2a35; border-color: #3a3a44; }
+html.dark th { background: #2a2a35; }
 
 /* ===== 打印样式 ===== */
 @media print {
@@ -293,9 +291,62 @@ th { background: #efe9d8; font-weight: 700; }
   border-bottom: 1px solid var(--rule);
 }
 
-/* 暗色模式下调整 */
-@media (prefers-color-scheme: dark) {
-  .toc { background: #2a2a35; }
-  #search-input { background: #2a2a35; color: var(--text); }
-  #back-to-top { background: #444; }
+html.dark .toc { background: #2a2a35; }
+html.dark #search-input { background: #2a2a35; color: var(--text); }
+html.dark #back-to-top { background: #444; }
+
+/* ===== 暗色切换按钮 ===== */
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 2px 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--text);
+  vertical-align: middle;
 }
+
+/* ===== 图片灯箱 ===== */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s, visibility 0.25s;
+  z-index: 2000;
+  cursor: zoom-out;
+}
+.lightbox.open {
+  opacity: 1;
+  visibility: visible;
+}
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  margin: 0;
+  border-radius: 4px;
+}
+
+/* ===== 代码复制按钮 ===== */
+pre { position: relative; }
+.copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 3px 10px;
+  font-size: 0.75rem;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--text);
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.copy-btn:hover { opacity: 1; }
+html.dark .copy-btn { background: #2a2a35; }
