@@ -49,5 +49,5 @@ friends:
 # 1. 去 https://cloud.umami.is 注册（有免费额度），或自建 umami
 # 2. 新建网站，拿到 website-id
 # 3. 填到下面 umami_website_id，脚本会自动生效
-umami_website_id: ""
+umami_website_id: "b7caffa7-ada5-4930-b50c-5215fcd172b4"
 umami_src: "https://cloud.umami.is/script.js"
