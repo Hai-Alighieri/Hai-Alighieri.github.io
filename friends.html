@@ -1,0 +1,16 @@
+---
+layout: page
+title: 友链
+permalink: /friends.html
+---
+<h1>友链</h1>
+
+<p>一些朋友的博客，欢迎互链～</p>
+
+<ul class="friends-list">
+{% for friend in site.friends %}
+  <li>
+    <a href="{{ friend.href }}" target="_blank" rel="noopener">{{ friend.title }}</a>{% if friend.desc %} <span class="muted">— {{ friend.desc }}</span>{% endif %}
+  </li>
+{% endfor %}
+</ul>

@@ -35,3 +35,19 @@ giscus_repo: Hai-Alighieri/Hai-Alighieri.github.io
 giscus_repo_id: "MDEwOlJlcG9zaXRvcnkyMTgyMTQ1NjY="
 giscus_category: General
 giscus_category_id: "DIC_kwDODQGwps4DKJ-S"
+
+# ===== 友链 =====
+friends:
+  - title: "朋友A"
+    href: "https://example.com"
+    desc: "朋友A的博客"
+  - title: "朋友B"
+    href: "https://example.org"
+    desc: "朋友B的博客"
+
+# ===== 访问统计（umami，隐私友好）=====
+# 1. 去 https://cloud.umami.is 注册（有免费额度），或自建 umami
+# 2. 新建网站，拿到 website-id
+# 3. 填到下面 umami_website_id，脚本会自动生效
+umami_website_id: ""
+umami_src: "https://cloud.umami.is/script.js"

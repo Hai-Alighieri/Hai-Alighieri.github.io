@@ -18,4 +18,8 @@
 
   <link rel="shortcut icon" href="{{ site.baseurl }}/img/favicon.ico">
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+
+  {% if site.umami_website_id %}
+  <script async defer data-website-id="{{ site.umami_website_id }}" src="{{ site.umami_src }}"></script>
+  {% endif %}
 </head>
