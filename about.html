@@ -35,7 +35,11 @@ permalink: /about.html
   {% else %}
   <div class="friend-card">
   {% endif %}
+    {% if friend.avatar %}
+    <img class="friend-avatar-img" src="{{ friend.avatar }}" alt="{{ friend.title }}">
+    {% else %}
     <div class="friend-avatar">{{ friend.title | slice: 0 }}</div>
+    {% endif %}
     <div class="friend-name">{{ friend.title }}</div>
     {% if friend.desc %}<div class="friend-title">{{ friend.desc }}</div>{% endif %}
   {% if friend.href %}
