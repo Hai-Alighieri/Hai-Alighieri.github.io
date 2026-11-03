@@ -179,15 +179,15 @@ li { margin: 0.4em 0; }
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 .friend-avatar {
-  width: 80px;
-  height: 80px;
+  width: 96px;
+  height: 96px;
   border-radius: 12px;
   background: linear-gradient(135deg, #667eea, #764ba2);
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 700;
   margin: 0 auto 10px;
 }
