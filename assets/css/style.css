@@ -128,13 +128,10 @@ li { margin: 0.4em 0; }
 
 
 
-/* ===== 右上角矩形头像（无白框，不跟随滚动） ===== */
+/* ===== 关于页：个人名片（居中） ===== */
 .profile-card {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  width: 180px;
   text-align: center;
+  margin: 24px 0 36px;
 }
 .profile-avatar {
   width: 160px;
@@ -144,7 +141,7 @@ li { margin: 0.4em 0; }
   margin: 0 auto 12px;
 }
 .profile-nickname {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: 1px;
 }
@@ -160,14 +157,50 @@ li { margin: 0.4em 0; }
   box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
 }
 
-/* 屏幕不够宽时，放回正文上方 */
-@media (max-width: 1280px) {
-  .profile-card {
-    position: static;
-    width: auto;
-    margin: 12px 0 40px;
-  }
+/* ===== 关于页：朋友网格 ===== */
+.friends-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 14px;
+  margin: 20px 0 40px;
 }
+.friend-card {
+  text-align: center;
+  padding: 20px 12px;
+  background: #fffdf4;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.friend-card:hover {
+  border-color: #667eea;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+.friend-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 auto 8px;
+}
+.friend-name {
+  font-weight: 700;
+  font-size: 1rem;
+}
+.friend-title {
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin-top: 2px;
+}
+html.dark .friend-card { background: #2a2a35; }
 
 /* ===== 排版精修 ===== */
 html { scroll-behavior: smooth; }

@@ -3,7 +3,12 @@ layout: page
 title: 关于
 permalink: /about.html
 ---
-<h1>关于</h1>
+
+<div class="profile-card">
+  <img class="profile-avatar" src="/img/avatar-by.jpg" alt="头像">
+  <div class="profile-nickname">远海9</div>
+  <div class="profile-title">创世神 · 大肥鱼饲养员</div>
+</div>
 
 <blockquote><p>雄关漫道真如铁，而今迈步从头越。</p></blockquote>
 
@@ -17,3 +22,17 @@ permalink: /about.html
 {% if site.email %}
 <p>邮箱：<a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
 {% endif %}
+
+<hr>
+
+<h2>朋友们</h2>
+
+<div class="friends-grid">
+{% for friend in site.friends %}
+  <a class="friend-card" href="{{ friend.href }}" target="_blank" rel="noopener">
+    <div class="friend-avatar">{{ friend.title | slice: 0 }}</div>
+    <div class="friend-name">{{ friend.title }}</div>
+    {% if friend.desc %}<div class="friend-title">{{ friend.desc }}</div>{% endif %}
+  </a>
+{% endfor %}
+</div>

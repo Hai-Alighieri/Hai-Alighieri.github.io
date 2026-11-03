@@ -2,11 +2,6 @@
 layout: page
 title: 首页
 ---
-<div class="profile-card">
-  <img class="profile-avatar" src="/img/avatar-by.jpg" alt="头像">
-  <div class="profile-nickname">远海9</div>
-  <div class="profile-title">创世神 · 大肥鱼饲养员</div>
-</div>
 {% for post in site.posts %}
 <article class="post-preview">
   <h2 class="post-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
