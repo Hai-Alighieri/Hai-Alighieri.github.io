@@ -29,6 +29,7 @@ permalink: /about.html
 
 <div class="friends-grid">
 {% for friend in site.friends %}
+  {% if friend.title %}
   {% if friend.href %}
   <a class="friend-card" href="{{ friend.href }}" target="_blank" rel="noopener">
   {% else %}
@@ -41,6 +42,7 @@ permalink: /about.html
   </a>
   {% else %}
   </div>
+  {% endif %}
   {% endif %}
 {% endfor %}
 </div>
