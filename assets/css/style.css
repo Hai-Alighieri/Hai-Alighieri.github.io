@@ -217,3 +217,85 @@ th { background: #efe9d8; font-weight: 700; }
   blockquote { border-left-color: #999; }
   hr { border-top-color: #999; }
 }
+
+/* ===== 阅读进度条 ===== */
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  z-index: 1000;
+  transition: width 0.1s linear;
+}
+
+/* ===== 返回顶部按钮 ===== */
+#back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 1000;
+}
+#back-to-top.show {
+  opacity: 0.8;
+  visibility: visible;
+}
+#back-to-top:hover { opacity: 1; }
+
+/* ===== 文章目录 TOC ===== */
+.toc {
+  background: #f3efe4;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 0 0 28px;
+  font-size: 0.95rem;
+}
+.toc::before {
+  content: "目录";
+  font-weight: 700;
+  display: block;
+  margin-bottom: 8px;
+}
+.toc ul { list-style: none; padding-left: 0; margin: 0; }
+.toc li { margin: 4px 0; }
+.toc a { color: var(--text); text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
+.toc a.active { color: var(--link); font-weight: 700; }
+.toc .toc-h3 { padding-left: 1em; }
+
+/* ===== 搜索页 ===== */
+#search-input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: #fff;
+  margin-bottom: 20px;
+  font-family: inherit;
+}
+.search-results { list-style: none; padding: 0; }
+.search-results li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* 暗色模式下调整 */
+@media (prefers-color-scheme: dark) {
+  .toc { background: #2a2a35; }
+  #search-input { background: #2a2a35; color: var(--text); }
+  #back-to-top { background: #444; }
+}
