@@ -38,12 +38,12 @@ giscus_category_id: "DIC_kwDODQGwps4DKJ-S"
 
 # ===== 友链 =====
 friends:
-  - title: "朋友A"
-    href: "https://example.com"
-    desc: "朋友A的博客"
-  - title: "朋友B"
-    href: "https://example.org"
-    desc: "朋友B的博客"
+  - title: "杉杉"
+    href: "超越善恶2吧吧主"
+    desc: ""
+  - title: ""
+    href: ""
+    desc: ""
 
 # ===== 访问统计（umami，隐私友好）=====
 # 1. 去 https://cloud.umami.is 注册（有免费额度），或自建 umami
